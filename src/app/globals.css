@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-level-blue: #155EEF;
+  --color-level-blue-light: #EFF4FF;
+  --color-level-blue-dark: #0040C1;
+  --color-level-navy: #0A1628;
+  --color-level-gray-50: #F9FAFB;
+  --color-level-gray-100: #F3F4F6;
+  --color-level-gray-500: #6B7280;
+  --color-level-gray-900: #111827;
+  --font-family-heading: "Inter", sans-serif;
+  --font-family-body: "Inter", sans-serif;
+}
