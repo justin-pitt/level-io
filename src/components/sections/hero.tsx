@@ -4,101 +4,44 @@ import { motion } from "framer-motion";
 import { AnimatedText } from "@/components/ui/animated-text";
 import { Button } from "@/components/ui/button";
 
-function DashboardMockup() {
-  return (
-    <div className="bg-[#111827] rounded-xl border border-white/10 p-6 text-left">
-      {/* Top bar */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <div className="w-3 h-3 rounded-full bg-red-500/80" />
-          <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-          <div className="w-3 h-3 rounded-full bg-green-500/80" />
-        </div>
-        <span className="text-xs text-gray-500 font-mono">Level Dashboard</span>
-      </div>
-
-      {/* Stats row */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="bg-white/5 rounded-lg p-4 border border-white/5">
-          <p className="text-xs text-gray-500 mb-1">Total Devices</p>
-          <p className="text-2xl font-bold text-white">1,284</p>
-          <p className="text-xs text-green-400 mt-1">+12 today</p>
-        </div>
-        <div className="bg-white/5 rounded-lg p-4 border border-white/5">
-          <p className="text-xs text-gray-500 mb-1">Online</p>
-          <p className="text-2xl font-bold text-green-400">1,197</p>
-          <p className="text-xs text-gray-500 mt-1">93.2%</p>
-        </div>
-        <div className="bg-white/5 rounded-lg p-4 border border-white/5">
-          <p className="text-xs text-gray-500 mb-1">Alerts</p>
-          <p className="text-2xl font-bold text-amber-400">7</p>
-          <p className="text-xs text-gray-500 mt-1">3 critical</p>
-        </div>
-      </div>
-
-      {/* Table mockup */}
-      <div className="bg-white/5 rounded-lg border border-white/5 overflow-hidden">
-        <div className="grid grid-cols-4 gap-4 px-4 py-2.5 border-b border-white/5 text-xs text-gray-500 font-medium">
-          <span>Device</span>
-          <span>OS</span>
-          <span>Status</span>
-          <span>Last Seen</span>
-        </div>
-        {[
-          { device: "WS-PROD-01", os: "Windows 11", status: "Online", statusColor: "text-green-400", time: "Just now" },
-          { device: "WS-PROD-02", os: "macOS 15.2", status: "Online", statusColor: "text-green-400", time: "2m ago" },
-          { device: "SRV-DB-03", os: "Ubuntu 24.04", status: "Warning", statusColor: "text-amber-400", time: "1m ago" },
-          { device: "WS-DEV-04", os: "Windows 11", status: "Online", statusColor: "text-green-400", time: "5m ago" },
-          { device: "SRV-WEB-05", os: "Ubuntu 22.04", status: "Offline", statusColor: "text-red-400", time: "3h ago" },
-        ].map((row) => (
-          <div key={row.device} className="grid grid-cols-4 gap-4 px-4 py-2.5 border-b border-white/5 last:border-0 text-sm">
-            <span className="text-white font-mono text-xs">{row.device}</span>
-            <span className="text-gray-400 text-xs">{row.os}</span>
-            <span className={`${row.statusColor} text-xs flex items-center gap-1.5`}>
-              <span className={`w-1.5 h-1.5 rounded-full ${row.statusColor.replace("text-", "bg-")}`} />
-              {row.status}
-            </span>
-            <span className="text-gray-500 text-xs">{row.time}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-28 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#0d1f3c] to-[#0a1628] overflow-hidden">
-      {/* Grid overlay */}
-      <div className="absolute inset-0 bg-grid" />
+    <section className="relative min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-20 bg-[#050d1f] overflow-hidden flex items-center">
+      {/* Radial glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-level-blue opacity-[0.07] blur-[120px]" />
+        <div
+          className="absolute inset-0 opacity-60"
+          style={{backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'/%3E%3C/svg%3E")`}}
+        />
+      </div>
 
-      {/* Glowing blue orb */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-level-blue opacity-10 blur-[120px] rounded-full w-[500px] h-[500px] pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto text-center">
-        {/* Pill badge */}
+      <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="mb-6 inline-flex"
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-level-blue/30 bg-level-blue/10 text-level-blue text-sm font-medium mb-8"
         >
-          <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-sm text-gray-300 backdrop-blur-sm">
-            Reinventing IT management
-          </span>
+          <span className="w-1.5 h-1.5 rounded-full bg-level-blue animate-pulse" />
+          Modern RMM Platform
         </motion.div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
-          <AnimatedText text="IT management" />
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6">
+          <span className="bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent">
+            <AnimatedText text="IT management" />
+          </span>
           <br />
-          <AnimatedText text="reinvented." delay={0.3} />
+          <span className="bg-gradient-to-r from-level-blue via-blue-400 to-blue-300 bg-clip-text text-transparent">
+            <AnimatedText text="reinvented." delay={0.3} />
+          </span>
         </h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto"
+          className="mt-6 text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed"
         >
           The modern RMM platform that saves your team thousands of hours.
           Simple pricing, powerful features, zero complexity.
@@ -114,14 +57,42 @@ export function Hero() {
           <Button variant="secondary" size="lg">Book a demo</Button>
         </motion.div>
 
-        {/* Dashboard mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.6 }}
+          className="mt-16 flex flex-wrap justify-center gap-8 text-center"
+        >
+          {[
+            { value: "10,000+", label: "Managed endpoints" },
+            { value: "$2", label: "Per device / month" },
+            { value: "SOC 2", label: "Type II certified" },
+            { value: "24/7", label: "Support" },
+          ].map((stat) => (
+            <div key={stat.label} className="flex flex-col items-center">
+              <span className="text-3xl font-bold text-white">{stat.value}</span>
+              <span className="text-sm text-white/40 mt-1">{stat.label}</span>
+            </div>
+          ))}
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.7 }}
-          className="mt-16 max-w-5xl mx-auto"
+          transition={{ delay: 1.2, duration: 0.8 }}
+          className="mt-16 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl overflow-hidden max-w-5xl mx-auto"
         >
-          <DashboardMockup />
+          <div className="aspect-video bg-gradient-to-br from-[#0d1b35] to-[#1a2d52] flex items-center justify-center">
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-xl bg-level-blue/20 border border-level-blue/30 flex items-center justify-center mx-auto mb-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
+                </svg>
+              </div>
+              <p className="text-white/40 text-sm">Product interface preview</p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

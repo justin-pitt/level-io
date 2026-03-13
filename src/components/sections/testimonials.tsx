@@ -23,7 +23,6 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
   const goTo = useCallback(
     (index: number) => {
       setActiveIndex(index);
-      // Reset auto-play timer when user clicks a dot
       setAutoPlay(false);
       setTimeout(() => setAutoPlay(true), 0);
     },
@@ -42,31 +41,46 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
 
   return (
     <SectionWrapper className="bg-level-navy">
-      <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-12">
-          Loved by IT teams everywhere
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-4">
+          Trusted by IT teams worldwide
         </h2>
+        <p className="text-gray-400 text-center mb-12">
+          See what our customers have to say.
+        </p>
 
-        <div className="min-h-[220px] flex items-center justify-center">
+        <div className="min-h-[280px] flex items-center justify-center">
           <AnimatePresence mode="wait">
-            <motion.blockquote
+            <motion.div
               key={current.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="text-center"
+              className="bg-[#111827] border border-white/10 rounded-xl p-8 w-full"
             >
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed italic mb-8">
-                &ldquo;{current.quote}&rdquo;
+              {/* Decorative quote mark */}
+              <span className="text-5xl font-serif leading-none text-level-blue select-none">
+                &ldquo;
+              </span>
+
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed mt-2 mb-8">
+                {current.quote}
               </p>
-              <footer>
-                <p className="text-white font-semibold text-lg">{current.author}</p>
-                <p className="text-white/60">
-                  {current.role}, {current.company}
-                </p>
+
+              <footer className="flex items-center gap-4">
+                {/* Avatar initials */}
+                <div className="bg-level-blue text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm shrink-0">
+                  {current.author.charAt(0)}
+                </div>
+                <div>
+                  <p className="text-white font-semibold">{current.author}</p>
+                  <p className="text-gray-400 text-sm">
+                    {current.role}, {current.company}
+                  </p>
+                </div>
               </footer>
-            </motion.blockquote>
+            </motion.div>
           </AnimatePresence>
         </div>
 
