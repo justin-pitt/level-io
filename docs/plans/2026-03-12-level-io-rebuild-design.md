@@ -2,7 +2,7 @@
 
 ## Purpose
 
-A React/Next.js reimagining of Level's marketing site (level.io) as a portfolio piece demonstrating Senior Frontend Engineer skills: React, TypeScript, GraphQL, animations, and responsive design.
+A React/Next.js reimagining of Level's product site (level.io) as a portfolio piece demonstrating Senior Frontend Engineer skills: React, TypeScript, GraphQL, animations, and responsive design.
 
 ## Design Direction
 

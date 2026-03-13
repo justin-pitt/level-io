@@ -1,6 +1,6 @@
-# Level.io — Marketing Site Rebuild
+# Level.io — Product Site Rebuild
 
-A React/Next.js reimagining of [Level's](https://level.io) marketing site, built as a frontend architecture portfolio piece.
+A React/Next.js reimagining of [Level's](https://level.io) product site, built as a frontend architecture portfolio piece. Level is a SaaS RMM (Remote Monitoring & Management) platform for IT teams and MSPs.
 
 ## Tech Stack
 
