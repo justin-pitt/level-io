@@ -37,7 +37,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
   const current = testimonials[activeIndex];
 
   return (
-    <SectionWrapper className="bg-level-navy py-16 md:py-24">
+    <SectionWrapper className="bg-level-navy !py-12 md:!py-16">
       <div className="max-w-4xl mx-auto text-center">
         <div className="min-h-[320px] flex flex-col items-center justify-center">
           <AnimatePresence mode="wait">

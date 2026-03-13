@@ -30,7 +30,7 @@ const steps = [
 
 export function LandingHowItWorks() {
   return (
-    <SectionWrapper id="how-it-works">
+    <SectionWrapper id="how-it-works" className="!pb-12">
       <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-16">
         How it works
       </h2>

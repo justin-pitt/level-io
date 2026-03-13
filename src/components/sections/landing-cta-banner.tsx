@@ -23,17 +23,13 @@ export function LandingCtaBanner() {
           Join thousands of IT teams who save hours every week.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+        <div className="flex flex-row flex-wrap gap-4 items-center justify-center">
           <Button size="lg" className="w-auto px-8">
             Get started for free
           </Button>
-          <Button
-            size="lg"
-            variant="ghost"
-            className="w-auto px-8 border border-white text-white hover:bg-white/10 bg-transparent"
-          >
+          <button className="inline-flex items-center justify-center rounded-lg font-semibold px-8 py-4 text-lg text-white border border-white/30 bg-transparent hover:bg-white/10 transition-colors duration-200 cursor-pointer">
             Book a demo
-          </Button>
+          </button>
         </div>
       </motion.div>
     </section>
