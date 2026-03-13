@@ -31,7 +31,7 @@ const steps = [
 export function HowItWorks() {
   return (
     <SectionWrapper id="how-it-works">
-      <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#d6d3cd] tracking-[-0.02em] text-center mb-16">
         How it works
       </h2>
 
@@ -60,7 +60,7 @@ export function HowItWorks() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-semibold text-white mb-3">
+              <h3 className="text-xl font-semibold text-[#d6d3cd] tracking-[-0.02em] mb-3">
                 {step.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">

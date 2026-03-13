@@ -24,7 +24,7 @@ export function Faq({ faqItems }: FaqProps) {
 
   return (
     <SectionWrapper id="faq">
-      <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#d6d3cd] tracking-[-0.02em] text-center mb-12">
         Frequently asked questions
       </h2>
 
