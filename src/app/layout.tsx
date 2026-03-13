@@ -9,8 +9,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Level.io",
-  description: "Level.io marketing site",
+  title: {
+    default: "Level | IT Management Reinvented",
+    template: "%s | Level",
+  },
+  description:
+    "The modern RMM platform that saves your team thousands of hours. Simple pricing, powerful features, zero complexity.",
+  openGraph: {
+    title: "Level | IT Management Reinvented",
+    description:
+      "The modern RMM platform that saves your team thousands of hours.",
+    type: "website",
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
