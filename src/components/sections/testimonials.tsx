@@ -43,7 +43,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
   return (
     <SectionWrapper className="bg-level-navy">
       <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-12">
           Loved by IT teams everywhere
         </h2>
 

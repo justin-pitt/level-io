@@ -23,7 +23,7 @@ export function FeatureCarousel({ features }: FeatureCarouselProps) {
 
   return (
     <SectionWrapper id="features">
-      <h2 className="text-3xl md:text-4xl font-bold text-level-navy text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-12">
         Everything you need, nothing you don&apos;t
       </h2>
 
@@ -38,14 +38,14 @@ export function FeatureCarousel({ features }: FeatureCarouselProps) {
                 onClick={() => setActiveId(feature.id)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg text-left whitespace-nowrap md:whitespace-normal transition-colors duration-200 cursor-pointer ${
                   isActive
-                    ? "bg-level-blue-light border-l-4 border-level-blue text-level-navy font-semibold"
-                    : "text-level-gray-500 hover:bg-level-gray-50"
+                    ? "bg-level-blue/15 border-l-4 border-level-blue text-white font-semibold"
+                    : "text-gray-400 hover:bg-white/5"
                 }`}
               >
                 <Icon
                   name={feature.icon}
                   size={20}
-                  className={isActive ? "text-level-blue" : "text-level-gray-500"}
+                  className={isActive ? "text-level-blue" : "text-gray-400"}
                 />
                 <span>{feature.title}</span>
               </button>
@@ -62,15 +62,15 @@ export function FeatureCarousel({ features }: FeatureCarouselProps) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-xl border border-level-gray-100 shadow-lg p-8 w-full"
+              className="bg-white/5 rounded-xl border border-white/10 shadow-lg p-8 w-full"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-lg bg-level-blue-light">
+                <div className="p-2 rounded-lg bg-level-blue/15">
                   <Icon name={active.icon} size={24} className="text-level-blue" />
                 </div>
-                <h3 className="text-xl font-bold text-level-navy">{active.title}</h3>
+                <h3 className="text-xl font-bold text-white">{active.title}</h3>
               </div>
-              <p className="text-level-gray-500 text-lg leading-relaxed">
+              <p className="text-gray-400 text-lg leading-relaxed">
                 {active.description}
               </p>
             </motion.div>

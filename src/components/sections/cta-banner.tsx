@@ -13,7 +13,7 @@ export function CtaBanner() {
         transition={{ duration: 0.6 }}
         className="max-w-4xl mx-auto text-center"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-8">
           Ready to automate your IT operations?
         </h2>
 

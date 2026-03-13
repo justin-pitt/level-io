@@ -55,8 +55,13 @@ export function Footer() {
           </div>
         ))}
       </div>
-      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-800 text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} Level. All rights reserved.
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-800 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span>&copy; {new Date().getFullYear()} Level. All rights reserved.</span>
+        <div className="flex gap-6">
+          <Link href="#" className="hover:text-white transition-colors">Terms</Link>
+          <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
+          <Link href="#" className="hover:text-white transition-colors">Security</Link>
+        </div>
       </div>
     </footer>
   );

@@ -18,7 +18,7 @@ interface CapabilitiesGridProps {
 export function CapabilitiesGrid({ capabilities }: CapabilitiesGridProps) {
   return (
     <SectionWrapper id="capabilities">
-      <h2 className="text-3xl md:text-4xl font-bold text-level-navy text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-16">
         Everything you need to automate
       </h2>
 
@@ -30,15 +30,15 @@ export function CapabilitiesGrid({ capabilities }: CapabilitiesGridProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="rounded-xl border border-level-gray-100 bg-white p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg"
+            className="rounded-xl border border-white/10 bg-white/5 p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg"
           >
-            <div className="w-12 h-12 rounded-lg bg-level-blue-light flex items-center justify-center mb-5">
+            <div className="w-12 h-12 rounded-lg bg-level-blue/15 flex items-center justify-center mb-5">
               <Icon name={cap.icon} size={24} className="text-level-blue" />
             </div>
-            <h3 className="text-lg font-semibold text-level-navy mb-2">
+            <h3 className="text-lg font-semibold text-white mb-2">
               {cap.title}
             </h3>
-            <p className="text-level-gray-500 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed">
               {cap.description}
             </p>
           </motion.div>

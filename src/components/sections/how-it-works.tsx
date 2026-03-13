@@ -31,7 +31,7 @@ const steps = [
 export function HowItWorks() {
   return (
     <SectionWrapper id="how-it-works">
-      <h2 className="text-3xl md:text-4xl font-bold text-level-navy text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-16">
         How it works
       </h2>
 
@@ -40,7 +40,7 @@ export function HowItWorks() {
           <div key={step.number} className="relative flex flex-col items-center">
             {/* Connector line between steps (hidden on first step and mobile) */}
             {i > 0 && (
-              <div className="hidden md:block absolute top-10 -left-2 w-[calc(100%_-_3rem)] h-0.5 bg-level-gray-100 -translate-x-full translate-x-1/2" />
+              <div className="hidden md:block absolute top-10 -left-2 w-[calc(100%_-_3rem)] h-0.5 bg-white/10 -translate-x-full translate-x-1/2" />
             )}
 
             <motion.div
@@ -48,11 +48,11 @@ export function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.2 }}
-              className="flex flex-col items-center text-center rounded-xl border border-level-gray-100 bg-white p-8 shadow-sm w-full"
+              className="flex flex-col items-center text-center rounded-xl border border-white/10 bg-white/5 p-8 shadow-sm w-full"
             >
               {/* Numbered circle with icon */}
               <div className="relative mb-6">
-                <div className="w-20 h-20 rounded-full bg-level-blue-light flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-level-blue/15 flex items-center justify-center">
                   <Icon name={step.icon} size={32} className="text-level-blue" />
                 </div>
                 <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-level-blue text-white text-sm font-bold flex items-center justify-center">
@@ -60,10 +60,10 @@ export function HowItWorks() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-semibold text-level-navy mb-3">
+              <h3 className="text-xl font-semibold text-white mb-3">
                 {step.title}
               </h3>
-              <p className="text-level-gray-500 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed">
                 {step.description}
               </p>
             </motion.div>
