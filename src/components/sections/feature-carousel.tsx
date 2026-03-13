@@ -62,7 +62,7 @@ export function FeatureCarousel({ features }: FeatureCarouselProps) {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-[#111827] rounded-xl border border-white/10 p-8 w-full"
+              className="bg-[#111827] rounded-xl border border-white/10 p-8 w-full hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-level-blue/15">

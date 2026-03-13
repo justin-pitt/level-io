@@ -43,7 +43,7 @@ export function LandingHowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.2 }}
-              className="flex flex-col items-center text-center rounded-xl border border-white/10 bg-white/5 p-8 shadow-sm w-full"
+              className="flex flex-col items-center text-center rounded-xl border border-white/10 bg-white/5 p-8 shadow-sm w-full hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
             >
               {/* Numbered circle with icon */}
               <div className="relative mb-6">

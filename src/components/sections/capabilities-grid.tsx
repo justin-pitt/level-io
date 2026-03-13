@@ -30,7 +30,7 @@ export function CapabilitiesGrid({ capabilities }: CapabilitiesGridProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="rounded-xl border border-white/10 bg-white/5 p-8 shadow-sm transition-shadow duration-300 hover:shadow-lg"
+            className="rounded-xl border border-white/10 bg-white/5 p-8 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
           >
             <div className="w-12 h-12 rounded-lg bg-level-blue/15 flex items-center justify-center mb-5">
               <Icon name={cap.icon} size={24} className="text-level-blue" />

@@ -61,15 +61,15 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6 }}
-          className="mt-16 flex flex-wrap justify-center gap-8 text-center"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-0 text-center"
         >
           {[
             { value: "10,000+", label: "Managed endpoints" },
             { value: "$2", label: "Per device / month" },
             { value: "SOC 2", label: "Type II certified" },
             { value: "24/7", label: "Support" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center">
+          ].map((stat, i) => (
+            <div key={stat.label} className={`flex flex-col items-center py-4 ${i > 0 ? "border-l border-white/10" : ""}`}>
               <span className="text-3xl font-bold text-white">{stat.value}</span>
               <span className="text-sm text-white/40 mt-1">{stat.label}</span>
             </div>

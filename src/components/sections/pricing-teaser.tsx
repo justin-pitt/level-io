@@ -22,7 +22,7 @@ export function PricingTeaser({ pricingPlan }: PricingTeaserProps) {
           Simple, transparent pricing
         </h2>
 
-        <div className="max-w-md mx-auto bg-white/5 rounded-2xl border border-white/10 p-8 md:p-10 shadow-[0_0_40px_rgba(21,94,239,0.15)]">
+        <div className="max-w-md mx-auto bg-white/5 rounded-2xl border border-level-blue/30 p-8 md:p-10 shadow-[0_0_40px_rgba(21,94,239,0.15)]">
           {/* Simple pricing badge */}
           <div className="mb-6">
             <span className="inline-block text-sm font-medium border border-level-blue/30 text-level-blue rounded-full px-4 py-1">
