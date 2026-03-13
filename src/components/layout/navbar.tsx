@@ -26,15 +26,14 @@ export function Navbar() {
         </Link>
       </div>
 
-      <header className="sticky top-0 left-0 right-0 z-50 bg-[#0a1628]/80 backdrop-blur-md border-b border-white/10">
+      <header className="sticky top-0 left-0 right-0 z-50 bg-[#181a1b]/80 backdrop-blur-md border-b border-white/10">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 lg:px-20 h-16">
-          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-white">
-            {/* Logo icon — layered squares */}
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="4" width="14" height="14" rx="3" fill="#155eef" opacity="0.5" />
-              <rect x="10" y="10" width="14" height="14" rx="3" fill="#155eef" />
-            </svg>
-            Level
+          <Link href="/" className="flex items-center">
+            <img
+              src="https://cdn.prod.website-files.com/65707faecd4cd453c0bb80ad/657087ef22ae05f257ad0b7b_Logo%20(1).svg"
+              alt="Level"
+              style={{ height: '32px', width: 'auto' }}
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -43,13 +42,13 @@ export function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm text-gray-400 hover:text-white transition-colors"
+                className="text-sm text-[#b1aaa0] hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
             ))}
             <div className="flex items-center gap-3 ml-4">
-              <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors font-medium">
+              <Link href="#" className="text-sm text-[#b1aaa0] hover:text-white transition-colors font-medium">
                 Log in
               </Link>
               <Button size="sm">Get started for free</Button>
@@ -79,20 +78,20 @@ export function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-b border-white/10 bg-[#0a1628]/95 backdrop-blur-md"
+              className="md:hidden border-b border-white/10 bg-[#181a1b]/95 backdrop-blur-md"
             >
               <div className="px-6 py-4 flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-gray-400 hover:text-white"
+                    className="text-[#b1aaa0] hover:text-white"
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <Link href="#" className="text-gray-400 hover:text-white font-medium">
+                <Link href="#" className="text-[#b1aaa0] hover:text-white font-medium">
                   Log in
                 </Link>
                 <Button size="sm" className="w-full">Get started for free</Button>

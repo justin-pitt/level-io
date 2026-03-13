@@ -14,7 +14,7 @@ const devices = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-20 bg-[#050d1f] overflow-hidden flex items-center">
+    <section className="relative min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-20 bg-[#111314] overflow-hidden flex items-center">
       {/* Radial glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-level-blue opacity-[0.07] blur-[120px]" />
@@ -35,8 +35,8 @@ export function Hero() {
           Modern RMM Platform
         </motion.div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-6">
-          <span className="bg-gradient-to-br from-white via-white to-white/60 bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[-0.05em] leading-[1.05] mb-6">
+          <span className="bg-gradient-to-br from-[#d6d3cd] via-[#d6d3cd] to-[#d6d3cd]/60 bg-clip-text text-transparent">
             <AnimatedText text="IT management" />
           </span>
           <br />

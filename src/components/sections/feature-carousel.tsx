@@ -257,7 +257,7 @@ export function FeatureCarousel({ features: _features }: FeatureCarouselProps) {
   return (
     <SectionWrapper id="features">
       <p className="text-sm font-medium text-level-blue mb-3 text-center">Features</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#d6d3cd] tracking-[-0.02em] text-center mb-16">
         Everything you need, nothing you don&apos;t
       </h2>
 
@@ -277,7 +277,7 @@ export function FeatureCarousel({ features: _features }: FeatureCarouselProps) {
               {/* Text side */}
               <div className={imageFirst ? "lg:order-2" : "lg:order-1"}>
                 <p className="text-sm font-medium text-level-blue mb-2">{block.eyebrow}</p>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#d6d3cd] tracking-[-0.02em] mb-4">
                   {block.title}
                 </h3>
                 <p className="text-gray-400 text-lg leading-relaxed mb-6">

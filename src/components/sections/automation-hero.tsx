@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 
 export function AutomationHero() {
   return (
-    <section className="pt-32 pb-28 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#0d1f3c] to-[#0a1628] relative overflow-hidden">
+    <section className="pt-32 pb-28 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#111314] to-[#181a1b] relative overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-[-0.05em] bg-gradient-to-r from-[#d6d3cd] to-blue-300 bg-clip-text text-transparent">
           <AnimatedText text="Automate everything." />
         </h1>
 

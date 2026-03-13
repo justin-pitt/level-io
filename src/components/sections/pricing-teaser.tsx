@@ -38,7 +38,7 @@ export function PricingTeaser({ pricingPlan }: PricingTeaserProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left column — feature highlights */}
         <div className="text-left">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#d6d3cd] tracking-[-0.02em] mb-6">
             Everything you need.
             <br />
             <span className="text-white/60">Nothing you don&apos;t.</span>
