@@ -24,7 +24,7 @@ export function Faq({ faqItems }: FaqProps) {
 
   return (
     <SectionWrapper id="faq">
-      <h2 className="text-3xl md:text-4xl font-bold text-level-navy text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-12">
         Frequently asked questions
       </h2>
 
@@ -34,14 +34,14 @@ export function Faq({ faqItems }: FaqProps) {
           return (
             <div
               key={item.id}
-              className="border border-level-gray-100 rounded-lg overflow-hidden"
+              className="border border-white/10 rounded-lg overflow-hidden"
             >
               <button
                 onClick={() => toggle(item.id)}
                 aria-expanded={isOpen}
-                className="w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer hover:bg-level-gray-50 transition-colors duration-200"
+                className="w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer hover:bg-white/5 transition-colors duration-200"
               >
-                <span className="font-semibold text-level-navy pr-4">
+                <span className="font-semibold text-white pr-4">
                   {item.question}
                 </span>
                 <motion.span
@@ -49,7 +49,7 @@ export function Faq({ faqItems }: FaqProps) {
                   transition={{ duration: 0.2 }}
                   className="shrink-0"
                 >
-                  <ChevronDown size={20} className="text-level-gray-500" />
+                  <ChevronDown size={20} className="text-gray-400" />
                 </motion.span>
               </button>
 
@@ -63,7 +63,7 @@ export function Faq({ faqItems }: FaqProps) {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-4 text-level-gray-500 leading-relaxed">
+                    <div className="px-6 pb-4 text-gray-400 leading-relaxed">
                       {item.answer}
                     </div>
                   </motion.div>
