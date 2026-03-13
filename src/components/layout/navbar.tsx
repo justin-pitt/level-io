@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Features", href: "/#features" },
+  { label: "Solutions", href: "#" },
   { label: "Pricing", href: "/#pricing" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Changelog", href: "#" },
+  { label: "Blog", href: "#" },
 ];
 
 export function Navbar() {
@@ -26,7 +28,12 @@ export function Navbar() {
 
       <header className="sticky top-0 left-0 right-0 z-50 bg-[#0a1628]/80 backdrop-blur-md border-b border-white/10">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 lg:px-20 h-16">
-          <Link href="/" className="text-xl font-bold text-white">
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold text-white">
+            {/* Logo icon — layered squares */}
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="14" height="14" rx="3" fill="#155eef" opacity="0.5" />
+              <rect x="10" y="10" width="14" height="14" rx="3" fill="#155eef" />
+            </svg>
             Level
           </Link>
 
@@ -34,15 +41,19 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
-                key={link.href}
+                key={link.label}
                 href={link.href}
                 className="text-sm text-gray-400 hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
             ))}
-            <Button variant="ghost" size="sm">Log in</Button>
-            <Button size="sm">Get started</Button>
+            <div className="flex items-center gap-3 ml-4">
+              <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors font-medium">
+                Log in
+              </Link>
+              <Button size="sm">Get started for free</Button>
+            </div>
           </div>
 
           {/* Mobile hamburger */}
@@ -73,7 +84,7 @@ export function Navbar() {
               <div className="px-6 py-4 flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <Link
-                    key={link.href}
+                    key={link.label}
                     href={link.href}
                     className="text-gray-400 hover:text-white"
                     onClick={() => setMobileOpen(false)}
@@ -81,8 +92,10 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <Button variant="ghost" size="sm" className="w-full">Log in</Button>
-                <Button size="sm" className="w-full">Get started</Button>
+                <Link href="#" className="text-gray-400 hover:text-white font-medium">
+                  Log in
+                </Link>
+                <Button size="sm" className="w-full">Get started for free</Button>
               </div>
             </motion.div>
           )}

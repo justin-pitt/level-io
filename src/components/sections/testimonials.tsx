@@ -20,14 +20,11 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
 
-  const goTo = useCallback(
-    (index: number) => {
-      setActiveIndex(index);
-      setAutoPlay(false);
-      setTimeout(() => setAutoPlay(true), 0);
-    },
-    []
-  );
+  const goTo = useCallback((index: number) => {
+    setActiveIndex(index);
+    setAutoPlay(false);
+    setTimeout(() => setAutoPlay(true), 0);
+  }, []);
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -40,16 +37,9 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
   const current = testimonials[activeIndex];
 
   return (
-    <SectionWrapper className="bg-level-navy">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-4">
-          Trusted by IT teams worldwide
-        </h2>
-        <p className="text-gray-400 text-center mb-12">
-          See what our customers have to say.
-        </p>
-
-        <div className="min-h-[280px] flex items-center justify-center">
+    <SectionWrapper className="bg-level-navy py-16 md:py-24">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="min-h-[320px] flex flex-col items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.id}
@@ -57,42 +47,43 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="bg-[#111827] border border-white/10 rounded-xl p-8 w-full"
+              className="flex flex-col items-center"
             >
               {/* Decorative quote mark */}
-              <span className="text-5xl font-serif leading-none text-level-blue select-none">
+              <span className="text-level-blue text-6xl font-serif leading-none select-none mb-4">
                 &ldquo;
               </span>
 
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed mt-2 mb-8">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-light text-white/90 leading-relaxed mb-10">
                 {current.quote}
               </p>
 
-              <footer className="flex items-center gap-4">
-                {/* Avatar initials */}
-                <div className="bg-level-blue text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm shrink-0">
-                  {current.author.charAt(0)}
-                </div>
-                <div>
-                  <p className="text-white font-semibold">{current.author}</p>
-                  <p className="text-gray-400 text-sm">
-                    {current.role}, {current.company}
-                  </p>
-                </div>
+              <footer className="flex flex-col items-center gap-1">
+                <p className="text-white font-semibold text-lg">
+                  {current.author}
+                </p>
+                <p className="text-gray-400">
+                  {current.role}
+                </p>
+                <p className="text-gray-400 text-lg font-medium mt-1">
+                  {current.company}
+                </p>
               </footer>
             </motion.div>
           </AnimatePresence>
         </div>
 
         {/* Dot navigation */}
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-3 mt-10">
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => goTo(i)}
               aria-label={`Go to testimonial ${i + 1}`}
               className={`w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer ${
-                i === activeIndex ? "bg-level-blue" : "bg-white/30 hover:bg-white/50"
+                i === activeIndex
+                  ? "bg-level-blue"
+                  : "bg-white/30 hover:bg-white/50"
               }`}
             />
           ))}
