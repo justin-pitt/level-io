@@ -186,6 +186,7 @@ function Bullet({ icon, text }: { icon: ReactNode; text: string }) {
 /* ------------------------------------------------------------------ */
 
 const blocks: {
+  eyebrow: string;
   title: string;
   description: string;
   bullets: { icon: ReactNode; text: string }[];
@@ -193,6 +194,7 @@ const blocks: {
   imagePosition: "left" | "right";
 }[] = [
   {
+    eyebrow: "Device Management",
     title: "Simplify your tech toolset",
     description:
       "Consolidate your IT management stack into one powerful platform. No more juggling between tools.",
@@ -212,6 +214,7 @@ const blocks: {
     imagePosition: "right",
   },
   {
+    eyebrow: "Automation",
     title: "Work smarter, not harder",
     description:
       "Build no-code automations that handle routine tasks while you focus on what matters.",
@@ -228,6 +231,7 @@ const blocks: {
     imagePosition: "left",
   },
   {
+    eyebrow: "Security",
     title: "Seamless speed. Seamless security.",
     description:
       "Peer-to-peer connections with end-to-end encryption. Fast, secure, and SOC 2 Type II certified.",
@@ -252,6 +256,7 @@ const blocks: {
 export function FeatureCarousel({ features: _features }: FeatureCarouselProps) {
   return (
     <SectionWrapper id="features">
+      <p className="text-sm font-medium text-level-blue mb-3 text-center">Features</p>
       <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight text-center mb-16">
         Everything you need, nothing you don&apos;t
       </h2>
@@ -271,6 +276,7 @@ export function FeatureCarousel({ features: _features }: FeatureCarouselProps) {
             >
               {/* Text side */}
               <div className={imageFirst ? "lg:order-2" : "lg:order-1"}>
+                <p className="text-sm font-medium text-level-blue mb-2">{block.eyebrow}</p>
                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                   {block.title}
                 </h3>

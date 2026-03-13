@@ -59,7 +59,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="mt-10 flex flex-row gap-4 items-center justify-center"
+          className="mt-6 flex flex-row gap-4 items-center justify-center"
         >
           <Button size="lg">Get started for free</Button>
           <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors font-medium">
@@ -71,19 +71,19 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6 }}
-          className="mt-16 flex flex-col md:flex-row items-stretch justify-center text-center"
+          className="mt-10 grid grid-cols-2 max-w-md mx-auto text-center"
         >
           {[
             { value: "10,000+", label: "Managed endpoints" },
             { value: "$2", label: "Per device / month" },
             { value: "SOC 2", label: "Type II certified" },
             { value: "24/7", label: "Support" },
-          ].map((stat, i, arr) => (
+          ].map((stat, i) => (
             <div
               key={stat.label}
               className={`flex flex-col items-center py-4 px-8 ${
-                i < arr.length - 1 ? "border-b md:border-b-0 md:border-r border-white/10" : ""
-              }`}
+                i % 2 === 0 ? "border-r border-white/10" : ""
+              } ${i < 2 ? "border-b border-white/10" : ""}`}
             >
               <span className="text-3xl font-bold text-white">{stat.value}</span>
               <span className="text-sm text-white/40 mt-1">{stat.label}</span>
